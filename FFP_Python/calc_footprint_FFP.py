@@ -1,7 +1,7 @@
 from __future__ import print_function
 def FFP(zm=None, z0=None, umean=None, h=None, ol=None, sigmav=None, ustar=None, 
         wind_dir=None, rs=[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8], rslayer=0,
-        nx=1000, crop=False, fig=True, **kwargs):
+        nx=1000, crop=False, fig=1, **kwargs):
     """
     Derive a flux footprint estimate based on the simple parameterisation FFP
     See Kljun, N., P. Calanca, M.W. Rotach, H.P. Schmid, 2015: 
@@ -507,5 +507,5 @@ def raise_ffp_exception(code):
 #====================================================
 # Test code below
 import calc_footprint_FFP as myfootprint
-FFP = myfootprint.FFP (zm=20., z0=0.1, h=2000., ol=-100., sigmav=0.6, ustar=0.4, wind_dir=30,
+FFP_result = myfootprint.FFP (zm=20., z0=0.1, h=2000., ol=-100., sigmav=0.6, ustar=0.4, wind_dir=30,
 rs= [20., 40., 60., 80.])
